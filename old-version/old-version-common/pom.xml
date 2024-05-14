@@ -21,12 +21,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <groupId>org.apache.seata</groupId>
-    <artifactId>rpc-sample-1.6.0</artifactId>
-    <version>1.6.0</version>
-    <packaging>jar</packaging>
+    <artifactId>old-version-common</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-    <name>seata-rpc-demo</name>
+    <name>old-version-common</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -61,17 +67,27 @@
             <version>1.7.32</version>
         </dependency>
         <!-- log dependency end -->
-
         <dependency>
-            <groupId>io.seata</groupId>
-            <artifactId>seata-spring-boot-starter</artifactId>
-            <version>1.6.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.apache.seata</groupId>
-            <artifactId>rpc-sample-core</artifactId>
-            <version>2.0.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.42</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.31</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
         </dependency>
 
     </dependencies>

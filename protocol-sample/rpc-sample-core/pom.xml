@@ -22,11 +22,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.apache.seata</groupId>
-    <artifactId>rpc-sample-1.6.0</artifactId>
-    <version>1.6.0</version>
+    <artifactId>rpc-sample-core</artifactId>
+    <version>2.0.0</version>
     <packaging>jar</packaging>
 
-    <name>seata-rpc-demo</name>
+    <name>seata-protocol-demo</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -64,14 +64,9 @@
 
         <dependency>
             <groupId>io.seata</groupId>
-            <artifactId>seata-spring-boot-starter</artifactId>
-            <version>1.6.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.seata</groupId>
-            <artifactId>rpc-sample-core</artifactId>
-            <version>2.0.0</version>
+            <artifactId>seata-all</artifactId>
+            <version>0.7.1</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

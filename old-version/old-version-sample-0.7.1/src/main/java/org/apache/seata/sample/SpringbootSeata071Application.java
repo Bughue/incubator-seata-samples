@@ -14,17 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.seata.core.rpc;
+package org.apache.seata.sample;
 
-import io.seata.core.rpc.netty.TmNettyRemotingClient;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * TmClient Demo
- *
- **/
-public class TmClientDemo {
+@SpringBootApplication
+public class SpringbootSeata071Application {
 
-    public static void main(String[] args) {
-        TmNettyRemotingClient client = TmNettyRemotingClient.getInstance();
-    }
+
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(SpringbootSeata071Application.class, args);
+	}
+
 }

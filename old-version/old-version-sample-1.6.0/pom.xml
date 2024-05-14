@@ -21,12 +21,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <groupId>org.apache.seata</groupId>
-    <artifactId>rpc-sample-1.6.0</artifactId>
+    <artifactId>old-version-sample-1.6.0</artifactId>
     <version>1.6.0</version>
     <packaging>jar</packaging>
 
-    <name>seata-rpc-demo</name>
+    <name>old-version-sample-1.6.0</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -37,41 +43,15 @@
     </properties>
 
     <dependencies>
-        <!-- log dependency start -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.32</version>
+            <groupId>org.apache.seata</groupId>
+            <artifactId>old-version-common</artifactId>
+            <version>1.0.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.9</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.32</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
-            <version>1.7.32</version>
-        </dependency>
-        <!-- log dependency end -->
-
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-spring-boot-starter</artifactId>
             <version>1.6.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.seata</groupId>
-            <artifactId>rpc-sample-core</artifactId>
-            <version>2.0.0</version>
         </dependency>
 
     </dependencies>

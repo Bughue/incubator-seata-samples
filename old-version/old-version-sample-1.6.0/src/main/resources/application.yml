@@ -1,0 +1,30 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://${mysql.address:127.0.0.1}:${mysql.port:3306}/seata?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useOldAliasMetadataBehavior=true
+#    username: root
+#    password: helloworld
+    url: jdbc:mysql://10.162.34.114:6606/id_bke_bcf_server_db?characterEncoding=UTF-8&useUnicode=true&useSSL=false
+    username: bke_dev2
+    password: pLja4YcJF_D5Gt6uW
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 100
+      minimum-idle: 10
+      pool-name: HikaraPool-1
+seata:
+  enabled: true
+  application-id: service-160
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      default: 127.0.0.1:8091
+    #enable-degrade: false
+    #disable-global-transaction: false
+

@@ -14,16 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package rpc;
+package org.apache.seata.sample.service;
 
-import io.seata.core.rpc.netty.TmRpcClient;
+public interface AccountService {
 
-/**
- * TmClient Demo
- **/
-public class TmClientDemo {
-
-    public static void main(String[] args) {
-        TmRpcClient instance = TmRpcClient.getInstance();
-    }
+    /**
+     * 余额扣款
+     *
+     * @param userId 用户ID
+     * @param money  扣款金额
+     */
+    void debit(String userId, int money);
 }
