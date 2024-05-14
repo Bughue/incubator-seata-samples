@@ -16,7 +16,6 @@
  */
 package org.apache.seata.sample.service.impl;
 
-import io.seata.core.context.RootContext;
 import org.apache.seata.sample.service.AccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +34,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void debit(String userId, int money) {
-        LOGGER.info("Account Service ... xid: " + RootContext.getXID());
         LOGGER.info("Deducting balance SQL: update account_tbl set money = money - {} where user_id = {}", money,
                 userId);
 
