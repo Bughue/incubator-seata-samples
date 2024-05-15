@@ -39,6 +39,7 @@ public class AccountServiceImpl implements AccountService {
 
         jdbcTemplate.update("update account_tbl set money = money - ? where user_id = ?", new Object[]{money, userId});
         LOGGER.info("Account Service End ... ");
+
     }
 
 }
